@@ -3,11 +3,17 @@
 
 * {border: 1px solid #aaa;}
 */
+html {
+  background-image: url(../images/Penguins.jpg);
+  background-size: cover;
+  height: 200%;
+  background-orgin: 50% 50%;
+  background-attachment: fixed;
+}
 body {
   display: flex;
   flex-direction: column;
   font-family: arial;
-  background-image: url(../images/Penguins.jpg);
 }
 header,
 footer {
@@ -17,6 +23,8 @@ header {
   display: flex;
   flex-direction: column;
   padding: 5px;
+  width: 1000px;
+  margin: auto;
 }
 header img {
   /* width : 352px; dimension de l'image */
@@ -71,6 +79,10 @@ main section article {
   height: 250px;
   font-size: 250px;
 }
+main section:nth-child(even) {
+  justify-content: center;
+  background-color: rgba(255, 192, 203, 0.7);
+}
 main section:nth-child(even) article:nth-child(1) {
   background-color: pink;
 }
@@ -87,19 +99,23 @@ main section:nth-child(even) article:nth-child(5) {
   background-color: pink;
 }
 main section:nth-child(even) article:nth-child(1) {
-  opacity: .9;
+  opacity: .7;
 }
 main section:nth-child(even) article:nth-child(2) {
   opacity: .8;
 }
 main section:nth-child(even) article:nth-child(3) {
-  opacity: .7;
+  opacity: .9;
 }
 main section:nth-child(even) article:nth-child(4) {
   opacity: .8;
 }
 main section:nth-child(even) article:nth-child(5) {
-  opacity: .9;
+  opacity: .7;
+}
+main section:nth-child(odd) {
+  justify-content: center;
+  background-color: rgba(224, 198, 229, 0.9);
 }
 main section:nth-child(odd) article:nth-child(1) {
   background-color: #e0c6e5;
@@ -131,8 +147,16 @@ main section:nth-child(odd) article:nth-child(4) {
 main section:nth-child(odd) article:nth-child(5) {
   opacity: .9;
 }
+main section {
+  justify-content: center;
+}
+main section article {
+  width: 200px;
+}
 footer {
   height: 70px;
+  width: 1000px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -148,8 +172,12 @@ footer div i {
 footer div i:hover {
   color: #c0fff4;
 }
-.global {
+.global,
+.global2 {
   width: 100%;
   text-align: center;
   margin: auto;
+}
+.global {
+  background-color: black;
 }

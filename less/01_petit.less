@@ -37,14 +37,21 @@
 
 
 
-
+html{
+  background-image:url(../images/Penguins.jpg);
+  background-size:cover;
+  height:200%;
+  background-orgin: 50% 50%;
+  background-attachment:fixed;
+}
 
 
 body{
   display : flex;
   flex-direction: column;
   font-family: arial;
-  background-image:url(../images/Penguins.jpg);
+
+  //padding-bottom:800px;
 }
 
 header, footer {
@@ -54,6 +61,8 @@ header{
   display: flex;
   flex-direction:column;
   padding:5px;
+  width:1000px;
+  margin:auto;
   
   img{
       /* width : 352px; dimension de l'image */
@@ -97,6 +106,8 @@ header{
     } // fin header  
 
 main{
+//width:1200px;
+//margin:auto;
     display:flex;
     flex-direction:column;
     section{
@@ -115,18 +126,22 @@ main{
       }
 
       &:nth-child(even) {
+          justify-content: center;
+      background-color:rgba(255, 192, 203, 0.7);
           article:nth-child(1) {background-color: @couleur-base;}
           article:nth-child(2) {background-color: @triadic-1;}
           article:nth-child(3) {background-color: @triadic-2;}
           article:nth-child(4) {background-color: @triadic-1;}
           article:nth-child(5) {background-color: @couleur-base;}
-          article:nth-child(1) {opacity: .9;}
+          article:nth-child(1) {opacity: .7;}
           article:nth-child(2) {opacity: .8;}
-          article:nth-child(3) {opacity: .7;}
+          article:nth-child(3) {opacity: .9;}
           article:nth-child(4) {opacity: .8;}
-          article:nth-child(5) {opacity: .9;}
+          article:nth-child(5) {opacity: .7;}
       }
       &:nth-child(odd) {
+          justify-content: center;
+          background-color:rgba(224, 198, 229, 0.9);
           article:nth-child(1) {background-color: @couleur-8;}
           article:nth-child(2) {background-color: @couleur-9;}
           article:nth-child(3) {background-color: @couleur-10;}
@@ -140,13 +155,25 @@ main{
       }
     }
 }
+main section{
+  
+      justify-content: center;
+
+
+}
+main section article{
+      width: 200px;
+}
 
 footer{
   height: 70px;
+  width:1000px;
+  margin:auto;
   display : flex;
   flex-direction:row;
   justify-content:center;
   align-items : center;
+  
 }
 
 footer div{
@@ -161,10 +188,15 @@ footer div i:hover{
    color : @couleur-complementaire;
 }
 
-.global{
+.global, .global2{
   width:100%;
   text-align:center;
   margin: auto;
+   
 }
+.global{
+  background-color:black;
+}
+
 
 
